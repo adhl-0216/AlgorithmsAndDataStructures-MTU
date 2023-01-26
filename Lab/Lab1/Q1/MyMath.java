@@ -1,6 +1,4 @@
-package Lab.Week1.Q1;
-
-import java.util.Arrays;
+package Lab.Lab1.Q1;
 
 public class MyMath {
     public static int smallest(int num1, int num2, int num3){

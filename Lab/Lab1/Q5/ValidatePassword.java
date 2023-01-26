@@ -1,4 +1,4 @@
-package Lab.Week1.Q5;
+package Lab.Lab1.Q5;
 
 import javax.swing.*;
 

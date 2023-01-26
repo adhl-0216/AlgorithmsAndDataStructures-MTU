@@ -1,4 +1,4 @@
-package Lab.Week1.Q5;
+package Lab.Lab1.Q5;
 
 public class TestPassword {
     public static void main(String[] args) {

@@ -1,7 +1,6 @@
-package Lab.Week1.Q2;
+package Lab.Lab1.Q2;
 
 import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class Q2 {
     public static void main(String[] args) {

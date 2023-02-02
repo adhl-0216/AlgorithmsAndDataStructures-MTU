@@ -1,4 +1,4 @@
-package Lab.Lab1.Q1;
+package Lab1.Q1;
 
 public class TestMyMath {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Lab.Lab1.Q1;
+package Lab1.Q1;
 
 public class MyMath {
     public static int smallest(int num1, int num2, int num3){

@@ -1,4 +1,4 @@
-package Lab.Lab2;
+package Lab2;
 
 public class Encrypter {
     public static String encryptRowColumn(String plainText, int numColumns){

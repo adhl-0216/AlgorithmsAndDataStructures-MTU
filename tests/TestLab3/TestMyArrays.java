@@ -1,3 +1,5 @@
+package TestLab3;
+
 import Lab3.MyArrays;
 import org.junit.jupiter.api.Test;
 

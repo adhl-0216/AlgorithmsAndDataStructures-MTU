@@ -1,0 +1,51 @@
+2. Show how the following lists will be sorted using (a) selection sort (b) insertion sort.
+
+Show all the comparisons required and the state of the array after each iteration of the outer for loop.
+
+For selection sort, also specify the swaps that take place.
+
+34, 26, 77, 33, 99, 82, 12, 55
+
+(a) Selection Sort
+iter 1:
+(34), 26, 77, 33, 99, 82, 12, 55
+26 < 34
+12 < 26
+swap 12 w 34
+12, 26, 77, 33, 99, 82, 34, 55
+
+iter 2:
+12, (26), 77, 33, 99, 82, 34, 55
+nothing smaller than 26
+12, 26, 77, 33, 99, 82, 34, 55
+
+iter 3: 
+12, 26, (77), 33, 99, 82, 34, 55
+33 < 77
+swap 77 w 33
+12, 26, 33, 77, 99, 82, 34, 55
+
+iter 4:
+12, 26, 33, (77), 99, 82, 34, 55
+34 < 77
+swap 34 w 77
+12, 26, 33, 34, 99, 82, 77, 55
+
+iter 5:
+12, 26, 33, 34, (99), 82, 77, 55
+82 < 99
+77 < 82
+55 < 77
+swap 99 w 55
+12, 26, 33, 34, 55, 82, 77, 99
+
+iter 6:
+12, 26, 33, 34, 55, (82), 77, 99
+77 < 82
+swap 82 w 77
+12, 26, 33, 34, 55, 77, 82, 99
+
+iter 7:
+12, 26, 33, 34, 55, 77, (82), 99
+nothing smaller than 82
+return 

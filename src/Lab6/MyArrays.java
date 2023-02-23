@@ -74,7 +74,6 @@ public class MyArrays {
         // Merge the sorted halves
         merge(arr, l, m, r);
     }
-
     public static void binarySearch(int[] arr, int target){
         insertionSort(arr);
 

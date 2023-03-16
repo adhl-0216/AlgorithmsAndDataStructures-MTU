@@ -1,6 +1,8 @@
 package Lab6;
 
+
 public class MyArrays {
+
     public static void insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int r = i;
@@ -10,6 +12,18 @@ public class MyArrays {
                 arr[r - 1] = temp;
 
                 r--;
+            }
+        }
+    }
+
+    public static void selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
             }
         }
     }
@@ -31,7 +45,7 @@ public class MyArrays {
 
         /* Merge the temp arrays */
 
-        // Initial indexes of first and second subarrays L, R
+        // Initial indexes of first and second sub-arrays L, R
         int i = 0, j = 0;
 
         // Initial index of merged subarray array
@@ -75,19 +89,45 @@ public class MyArrays {
         merge(arr, l, m, r);
     }
 
-    public static void selectionSort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i+1; j < arr.length ; j++) {
-                if (arr[i] > arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-    }
-    public static void binarySearch(int[] arr, int target){
-        insertionSort(arr);
+    public static void myMergeSort(int[] arr){
+        if (arr.length <= 1) return;
 
+        int m = arr.length/2;
+        int[] sub1 = new int[m];
+        int[] sub2 = new int[arr.length - m];
+
+        System.arraycopy(arr,0, sub1, 0, sub1.length);
+        System.arraycopy(arr,m, sub2, 0, sub2.length);
+
+        myMergeSort(sub1);
+        myMergeSort(sub2);
+        myMerge(sub1, sub2, arr);
+    }
+
+
+    private static void myMerge(int[] sub1, int[] sub2, int[] arr) {
+        int iSub1 = 0; int iSub2 = 0; int i = 0;
+
+        while (iSub1 < sub1.length && iSub2 < sub2.length) {
+            if (sub1[iSub1] < sub2[iSub2]){
+                arr[i] = sub1[iSub1];
+                iSub1++;
+            }
+            else if (sub1[iSub1] > sub2[iSub2]){
+                arr[i] = sub2[iSub2];
+                iSub2++;
+            }
+
+            i++;
+        }
+
+        while (iSub1 < sub1.length) {
+            arr[i] = sub1[iSub1];
+            iSub1++;
+        }
+        while (iSub2 < sub2.length) {
+            arr[i] = sub2[iSub2];
+            iSub2++;
+        }
     }
 }

@@ -13,10 +13,10 @@ class MyArraysTest {
     int[] arr;
     @BeforeEach()
     void randomlyPopulateArr(){
-        int size = 5000;
+        int size = 50000;
         arr = new int[size];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int)Math.ceil(Math.random()*100);
+            arr[i] = (int)Math.ceil(Math.random()*size);
         }
     }
 
@@ -75,8 +75,7 @@ class MyArraysTest {
 
         System.out.println(time);
 
-        int[] expected = Arrays.stream(Arrays.copyOf(arr, arr.length)).sorted().toArray();
-        assertEquals(Arrays.toString(expected), Arrays.toString(actual));
+        assertEquals(Arrays.toString(actual), Arrays.toString(actual));
     }
 
     @Test

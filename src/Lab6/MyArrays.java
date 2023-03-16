@@ -113,7 +113,7 @@ public class MyArrays {
                 arr[i] = sub1[iSub1];
                 iSub1++;
             }
-            else if (sub1[iSub1] > sub2[iSub2]){
+            else {
                 arr[i] = sub2[iSub2];
                 iSub2++;
             }
@@ -124,10 +124,12 @@ public class MyArrays {
         while (iSub1 < sub1.length) {
             arr[i] = sub1[iSub1];
             iSub1++;
+            i++;
         }
         while (iSub2 < sub2.length) {
             arr[i] = sub2[iSub2];
             iSub2++;
+            i++;
         }
     }
 }
